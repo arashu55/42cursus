@@ -6,7 +6,7 @@
 #    By: ashu <ashu@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/26 19:33:55 by ashu              #+#    #+#              #
-#    Updated: 2024/08/27 19:06:29 by ashu             ###   ########.fr        #
+#    Updated: 2024/08/27 19:09:31 by ashu             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,7 @@ test: $(NAME) $(TEST_OBJS)
 	./test_isdigit
 	
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJS) $(TEST_OBJS)
 
 fclean: clean
 	rm -f $(NAME)
