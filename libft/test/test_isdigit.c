@@ -6,11 +6,11 @@
 /*   By: ashu <ashu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 19:26:44 by ashu              #+#    #+#             */
-/*   Updated: 2024/08/27 19:19:10 by ashu             ###   ########.fr       */
+/*   Updated: 2024/08/27 19:25:14 by ashu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 #include <stdio.h>
 #include <ctype.h>
 
