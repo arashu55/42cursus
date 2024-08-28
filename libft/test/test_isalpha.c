@@ -6,7 +6,7 @@
 /*   By: ashu <ashu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/14 19:57:29 by ashu              #+#    #+#             */
-/*   Updated: 2024/08/28 22:46:17 by ashu             ###   ########.fr       */
+/*   Updated: 2024/08/28 23:10:05 by ashu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,33 @@
 #include "libft.h"
 #include <ctype.h>
 
-#define GREEN "\x1B[32m"
 #define RED "\x1B[31m"
+#define ORANGE "\x1B[33m"
+#define YELLOW "\x1B[93m"
+#define GREEN "\x1B[32m"
+#define BLUE "\x1B[34m"
+#define INDIGO "\x1B[35m"
+#define VIOLET "\x1B[95m"
 #define RESET "\x1B[0m"
-// #define WHITE "\x1B[38m"
+
+void display_banner() 
+{
+    printf(RED "          :::        ::::::::       :::    :::      :::    :::    :::::::::::       ::::::::::       ::::::::   :::::::::::       ::::::::::       :::::::::\n" RESET);
+    printf(ORANGE "       :+: :+:     :+:    :+:      :+:    :+:      :+:    :+:        :+:           :+:             :+:    :+:      :+:           :+:              :+:    :+:\n" RESET);
+    printf(YELLOW "     +:+   +:+    +:+             +:+    +:+      +:+    +:+        +:+           +:+             +:+             +:+           +:+              +:+    +:+\n" RESET);
+    printf(GREEN "   +#++:++#++:   +#++:++#++      +#++:++#++      +#+    +:+        +#+           +#++:++#        +#++:++#++      +#+           +#++:++#         +#++:++#:\n" RESET);
+    printf(BLUE "  +#+     +#+          +#+      +#+    +#+      +#+    +#+        +#+           +#+                    +#+      +#+           +#+              +#+    +#+\n" RESET);
+    printf(INDIGO " #+#     #+#   #+#    #+#      #+#    #+#      #+#    #+#        #+#           #+#             #+#    #+#      #+#           #+#              #+#    #+#\n" RESET);
+    printf(VIOLET "###     ###    ########       ###    ###       ########         ###           ##########       ########       ###           ##########       ###    ###\n" RESET);
+    printf("\n");
+    printf("\n");
+}
+
+void test_function_name()
+{
+   printf("《ft_isalpha.c》");
+   printf("\n");
+}
 
 void test_isalpha()
 {
@@ -38,6 +61,7 @@ void test_isalpha()
       ft = ft_isalpha(tests[i]);
       honke = isalpha(tests[i]);
 
+      printf("【test%d】", i);
       if (ft == honke)
       {
          printf(GREEN "OK " RESET);
@@ -48,12 +72,14 @@ void test_isalpha()
       }
       i++;
    }
+   printf("\n");
+   printf("\n");
+   printf("\n");
 }
 
 int main() {
-   printf(GREEN "This text is green.\n" RESET);
-   printf(RED "This text is red.\n" RESET);
-   printf("This text is the default color.\n");
+   display_banner();
+   test_function_name();
    test_isalpha();
    return 0;
 }
