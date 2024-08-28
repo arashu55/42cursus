@@ -6,7 +6,7 @@
 /*   By: ashu <ashu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 19:26:44 by ashu              #+#    #+#             */
-/*   Updated: 2024/08/29 03:05:09 by ashu             ###   ########.fr       */
+/*   Updated: 2024/08/29 04:44:22 by ashu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ void test_isdigit()
       }
       else
       {
-         printf(RED "FAIELD " RESET);
+         printf(RED "FAILED " RESET);
       }
       i++;
    }

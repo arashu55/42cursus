@@ -6,7 +6,7 @@
 /*   By: ashu <ashu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/14 19:57:29 by ashu              #+#    #+#             */
-/*   Updated: 2024/08/29 04:29:45 by ashu             ###   ########.fr       */
+/*   Updated: 2024/08/29 04:43:34 by ashu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void test_isalpha()
       }
       else
       {
-         printf(RED "FAIELD " RESET);
+         printf(RED "FAILED " RESET);
       }
       i++;
    }
