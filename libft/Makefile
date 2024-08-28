@@ -6,7 +6,7 @@
 #    By: ashu <ashu@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/26 19:33:55 by ashu              #+#    #+#              #
-#    Updated: 2024/08/29 04:32:38 by ashu             ###   ########.fr        #
+#    Updated: 2024/08/29 04:36:53 by ashu             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ OBJS = $(SRCS:.c=.o)
 
 TEST_DIR = test
 TEST_SRCS = $(filter-out $(TEST_DIR)/display_banner.c, $(wildcard $(TEST_DIR)/*.c))
-TEST_OBJS = $(TEST_SRCS:.c=.o)
+TEST_OBJS = @$(TEST_SRCS:.c=.o)
 TEST_EXES = $(TEST_SRCS:.c=)
 
 CC = cc
@@ -26,16 +26,16 @@ CFLAGS = -Wall -Wextra -Werror
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar rcs $(NAME) $(OBJS)
+	@ar rcs $(NAME) $(OBJS)
 
 $(TEST_DIR)/%.o: $(TEST_DIR)/%.c
-	$(CC) -I. -c $< -o $@
+	@$(CC) -I. -c $< -o $@
 
 $(TEST_DIR)/%: $(TEST_DIR)/%.o $(NAME)
-	$(CC) -o $@ $< -L. -lft -I.
+	@$(CC) -o $@ $< -L. -lft -I.
 
 display_banner: $(TEST_DIR)/display_banner.o $(NAME)
-	$(CC) -o $(TEST_DIR)/display_banner $(TEST_DIR)/display_banner.o -L. -lft -I.
+	@$(CC) -o $(TEST_DIR)/display_banner $(TEST_DIR)/display_banner.o -L. -lft -I.
 
 test: $(NAME) display_banner $(TEST_EXES)
 	@./$(TEST_DIR)/display_banner
