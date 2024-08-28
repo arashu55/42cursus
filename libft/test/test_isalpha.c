@@ -6,7 +6,7 @@
 /*   By: ashu <ashu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/14 19:57:29 by ashu              #+#    #+#             */
-/*   Updated: 2024/08/28 23:10:05 by ashu             ###   ########.fr       */
+/*   Updated: 2024/08/29 04:29:45 by ashu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,26 +15,9 @@
 #include <ctype.h>
 
 #define RED "\x1B[31m"
-#define ORANGE "\x1B[33m"
-#define YELLOW "\x1B[93m"
 #define GREEN "\x1B[32m"
-#define BLUE "\x1B[34m"
-#define INDIGO "\x1B[35m"
-#define VIOLET "\x1B[95m"
 #define RESET "\x1B[0m"
 
-void display_banner() 
-{
-    printf(RED "          :::        ::::::::       :::    :::      :::    :::    :::::::::::       ::::::::::       ::::::::   :::::::::::       ::::::::::       :::::::::\n" RESET);
-    printf(ORANGE "       :+: :+:     :+:    :+:      :+:    :+:      :+:    :+:        :+:           :+:             :+:    :+:      :+:           :+:              :+:    :+:\n" RESET);
-    printf(YELLOW "     +:+   +:+    +:+             +:+    +:+      +:+    +:+        +:+           +:+             +:+             +:+           +:+              +:+    +:+\n" RESET);
-    printf(GREEN "   +#++:++#++:   +#++:++#++      +#++:++#++      +#+    +:+        +#+           +#++:++#        +#++:++#++      +#+           +#++:++#         +#++:++#:\n" RESET);
-    printf(BLUE "  +#+     +#+          +#+      +#+    +#+      +#+    +#+        +#+           +#+                    +#+      +#+           +#+              +#+    +#+\n" RESET);
-    printf(INDIGO " #+#     #+#   #+#    #+#      #+#    #+#      #+#    #+#        #+#           #+#             #+#    #+#      #+#           #+#              #+#    #+#\n" RESET);
-    printf(VIOLET "###     ###    ########       ###    ###       ########         ###           ##########       ########       ###           ##########       ###    ###\n" RESET);
-    printf("\n");
-    printf("\n");
-}
 
 void test_function_name()
 {
@@ -74,11 +57,10 @@ void test_isalpha()
    }
    printf("\n");
    printf("\n");
-   printf("\n");
 }
 
-int main() {
-   display_banner();
+int main() 
+{
    test_function_name();
    test_isalpha();
    return 0;
