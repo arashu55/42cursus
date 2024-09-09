@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ashu <ashu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/09 23:24:00 by ashu              #+#    #+#             */
-/*   Updated: 2024/09/10 02:06:57 by ashu             ###   ########.fr       */
+/*   Created: 2024/09/10 01:38:41 by ashu              #+#    #+#             */
+/*   Updated: 2024/09/10 01:52:59 by ashu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "libft.h"
 
-
-size_t  ft_strlen(const char *s)
+void *ft_memset(void *b, int c, size_t len);
 {
-    if (s == NULL)  // NULL チェックを追加
-        return 0;
     size_t i;
+    char *s;
 
+    s = (char *)b;
     i = 0;
-    while (s[i] != 0)
+    while (i < len)
     {
+        s[i] = (usigned char)c;
         i++;
     }
-    return i;
+
+    return (b);
 }
