@@ -6,13 +6,13 @@
 #    By: ashu <ashu@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/26 19:33:55 by ashu              #+#    #+#              #
-#    Updated: 2024/09/10 01:20:19 by ashu             ###   ########.fr        #
+#    Updated: 2024/09/10 02:47:08 by ashu             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-SRCS = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isupper.c ft_islower.c ft_isascii.c ft_isprint.c ft_strlen.c
+SRCS = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isupper.c ft_islower.c ft_isascii.c ft_isprint.c ft_strlen.c ft_memset.c
 OBJS = $(SRCS:.c=.o)
 
 TEST_DIR = test
@@ -32,7 +32,7 @@ $(TEST_DIR)/%.o: $(TEST_DIR)/%.c
 	@$(CC) -I. -c $< -o $@
 
 $(TEST_DIR)/%: $(TEST_DIR)/%.o $(NAME)
-	$(CC) -o $@ $< -L. $(NAME) -I.
+	@$(CC) -o $@ $< -L. -lft -I.
 
 display_banner: $(TEST_DIR)/display_banner.o $(NAME)
 	@$(CC) -o $(TEST_DIR)/display_banner $(TEST_DIR)/display_banner.o -L. -lft -I.
