@@ -6,7 +6,7 @@
 /*   By: ashu <ashu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/29 05:04:58 by ashu              #+#    #+#             */
-/*   Updated: 2024/09/01 15:19:08 by ashu             ###   ########.fr       */
+/*   Updated: 2024/09/10 04:30:23 by ashu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,9 @@
 
 #define RED "\x1B[31m"
 #define GREEN "\x1B[32m"
+#define SHADOW "\x1B[2m"
+#define CYAN "\x1B[36m"
+#define YEALLOW "\x1B[33m"
 #define RESET "\x1B[0m"
 
 
@@ -101,6 +104,34 @@ void test_isascii()
       else
       {
          printf(RED "FAILED " RESET);
+      }
+      i++;
+   }
+   printf("\n");
+
+   i = 0;
+
+   while (i != num)
+   {
+      int ft;
+      int honke;  
+      ft = ft_isascii(tests[i]);
+      honke = isascii(tests[i]);
+
+      printf("【test%d】", i);
+      if (ft == honke)
+      {
+         printf(SHADOW "libft is " RESET);
+         printf(CYAN "%d" RESET,ft);
+         printf(SHADOW "linux is " RESET);
+         printf(CYAN "%d" RESET,honke);
+      }
+      else
+      {
+         printf(SHADOW "libft is " RESET);
+         printf(CYAN "%d" RESET,ft);
+         printf(SHADOW "linux is " RESET);
+         printf(YEALLOW "%d" RESET,honke);
       }
       i++;
    }

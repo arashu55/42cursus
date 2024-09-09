@@ -6,7 +6,7 @@
 /*   By: ashu <ashu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/14 19:57:29 by ashu              #+#    #+#             */
-/*   Updated: 2024/08/29 04:49:41 by ashu             ###   ########.fr       */
+/*   Updated: 2024/09/10 04:27:01 by ashu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,9 @@
 #define RED "\x1B[31m"
 #define GREEN "\x1B[32m"
 #define RESET "\x1B[0m"
+#define SHADOW "\x1B[2m"
+#define CYAN "\x1B[36m"
+#define YEALLOW "\x1B[33m"
 
 
 void test_function_name()
@@ -83,6 +86,35 @@ void test_isalpha()
       }
       i++;
    }
+   printf("\n");
+
+   i = 0;
+
+   while (i != num)
+   {
+      int ft;
+      int honke;  
+      ft = ft_isalpha(tests[i]);
+      honke = isalpha(tests[i]);
+
+      printf("【test%d】", i);
+      if (ft == honke)
+      {
+         printf(SHADOW "libft is " RESET);
+         printf(CYAN "%d" RESET,ft);
+         printf(SHADOW "linux is " RESET);
+         printf(CYAN "%d" RESET,honke);
+      }
+      else
+      {
+         printf(SHADOW "libft is " RESET);
+         printf(CYAN "%d" RESET,ft);
+         printf(SHADOW "linux is " RESET);
+         printf(YEALLOW "%d" RESET,honke);
+      }
+      i++;
+   }
+
    printf("\n");
    printf("\n");
 }
