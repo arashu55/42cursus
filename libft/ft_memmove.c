@@ -1,29 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ashu <ashu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/09 23:24:00 by ashu              #+#    #+#             */
-/*   Updated: 2024/09/10 11:48:20 by ashu             ###   ########.fr       */
+/*   Created: 2024/09/10 09:47:02 by ashu              #+#    #+#             */
+/*   Updated: 2024/09/10 11:48:35 by ashu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "libft.h"
 
-
-size_t  ft_strlen(const char *s)
+void *memmove(void *dest, const void *src, size_t n)
 {
-    if (s == NULL)  // NULL チェックを追加
-        return 0;
+    unsigned char * a;
+    const unsigned char * b;
+    unsigned char c[n];
     size_t i;
 
+    a = (unsigned char *)dest;
+    b = (const unsigned char *)src;
     i = 0;
-    while (s[i] != 0)
+
+    while (i < n)
     {
+        c[i] = b[i];
         i++;
     }
-    return i;
+    
+    i = 0;
+    while (i < n)
+    {
+        a[i] = c[i];
+        i++;
+    }
+
+    return dest;
 }
+
+// スタックオーバーフロー対策のため、バファをヒープ領域にする必要あり。

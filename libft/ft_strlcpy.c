@@ -1,27 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ashu <ashu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/09 23:24:00 by ashu              #+#    #+#             */
-/*   Updated: 2024/09/10 11:48:20 by ashu             ###   ########.fr       */
+/*   Created: 2024/09/10 10:25:13 by ashu              #+#    #+#             */
+/*   Updated: 2024/09/10 11:48:16 by ashu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "libft.h"
 
-
-size_t  ft_strlen(const char *s)
+size_t ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-    if (s == NULL)  // NULL チェックを追加
-        return 0;
     size_t i;
-
+    
     i = 0;
-    while (s[i] != 0)
+    
+    if (dstsize != 0)
+    {
+        while (i < dstsize - 1 && src[i] != '\0')
+        {
+            dst[i] = src [i];
+            i++;
+        }
+        dst[i] = '\0';
+    }
+   
+    // i = 0;  これいらないらしいけど確かにそうだわ！！
+    while (src[i] != '\0')
     {
         i++;
     }

@@ -1,29 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ashu <ashu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/09 23:24:00 by ashu              #+#    #+#             */
-/*   Updated: 2024/09/10 11:48:20 by ashu             ###   ########.fr       */
+/*   Created: 2024/09/10 12:04:26 by ashu              #+#    #+#             */
+/*   Updated: 2024/09/10 12:31:27 by ashu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "libft.h"
 
-
-size_t  ft_strlen(const char *s)
+char *ft_strrchr(const char *s, int c)
 {
-    if (s == NULL)  // NULL チェックを追加
-        return 0;
     size_t i;
+    int b;
+    char a;
 
+    a = (char)c;
     i = 0;
-    while (s[i] != 0)
+    b = -1;
+
+    while (s[i])
     {
+        if (s[i] == a)
+        {
+            b = i;
+        }
         i++;
     }
-    return i;
+
+    if (s[i] == a)
+    {
+        b = i;
+    }
+
+    if (b == -1)
+    {
+        return '\0';
+    }
+    return (char *)&s[b];
 }

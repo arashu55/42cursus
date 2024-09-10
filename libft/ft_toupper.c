@@ -1,29 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ashu <ashu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/09 23:24:00 by ashu              #+#    #+#             */
-/*   Updated: 2024/09/10 11:48:20 by ashu             ###   ########.fr       */
+/*   Created: 2024/09/10 11:37:45 by ashu              #+#    #+#             */
+/*   Updated: 2024/09/10 11:48:14 by ashu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "libft.h"
 
-
-size_t  ft_strlen(const char *s)
+int ft_toupper(int c)
 {
-    if (s == NULL)  // NULL チェックを追加
-        return 0;
-    size_t i;
-
-    i = 0;
-    while (s[i] != 0)
+    if ('a' <= c && c <= 'z')
     {
-        i++;
+        return c - 32;
     }
-    return i;
+    return c;
 }
