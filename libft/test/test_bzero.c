@@ -6,13 +6,13 @@
 /*   By: ashu <ashu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/10 13:47:19 by ashu              #+#    #+#             */
-/*   Updated: 2024/09/10 15:23:08 by ashu             ###   ########.fr       */
+/*   Updated: 2024/09/12 20:43:36 by ashu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
-#include <strings.h>
+#include <string.h>
 #include <stdlib.h>
 
 #define RED "\x1B[31m"
