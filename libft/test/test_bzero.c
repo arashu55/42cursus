@@ -6,13 +6,13 @@
 /*   By: ashu <ashu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/10 13:47:19 by ashu              #+#    #+#             */
-/*   Updated: 2024/09/12 20:43:36 by ashu             ###   ########.fr       */
+/*   Updated: 2024/09/13 07:03:54 by ashu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
-#include <string.h>
+#include <strings.h>
 #include <stdlib.h>
 
 #define RED "\x1B[31m"
@@ -111,11 +111,11 @@ void test_bzero()
         }
 
         printf("\n");
-        // オリジナルのメモリを表示
+        // オリジナル
         printf("Before bzero (libft): ");
         print_memory(tests[i].b, tests[i].len + 5);  // 元のメモリ内容を表示（長さ調整）
 
-        // 自作bzeroを適用
+        // 自作
         ft_bzero(tests[i].b, tests[i].len);
 
         // 結果を表示
