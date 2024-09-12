@@ -6,13 +6,13 @@
 /*   By: ashu <ashu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/13 05:25:28 by ashu              #+#    #+#             */
-/*   Updated: 2024/09/13 05:46:09 by ashu             ###   ########.fr       */
+/*   Updated: 2024/09/13 05:53:26 by ashu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *calloc(size_t nmemb, size_t size)
+void *ft_calloc(size_t nmemb, size_t size)
 {
     size_t i;
     char *s;
