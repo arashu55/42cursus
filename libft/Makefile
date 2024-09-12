@@ -6,13 +6,13 @@
 #    By: ashu <ashu@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/26 19:33:55 by ashu              #+#    #+#              #
-#    Updated: 2024/09/10 13:54:26 by ashu             ###   ########.fr        #
+#    Updated: 2024/09/12 23:58:16 by ashu             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-SRCS = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isupper.c ft_islower.c ft_isascii.c ft_isprint.c ft_strlen.c ft_memset.c ft_bzero.c
+SRCS = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isupper.c ft_islower.c ft_isascii.c ft_isprint.c ft_strlen.c ft_memset.c ft_bzero.c ft_atoi.c
 OBJS = $(SRCS:.c=.o)
 
 TEST_DIR = test
