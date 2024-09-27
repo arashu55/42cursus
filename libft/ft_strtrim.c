@@ -35,7 +35,7 @@ char *ft_strtrim(char const *s1, char const *set)
         e--;
     }
 
-    ptr = (char *)malloc((end - start + 1));
+    ptr = (char *)malloc((e - s + 1));
 
     if (!ptr)
     {
