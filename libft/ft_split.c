@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 static int ft_countlen(const char *s, char c, size_t *length)
 {
     size_t word_count;
