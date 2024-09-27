@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static int ft_countlen(const char *s, char c, size_t *length)
+static size_t ft_countlen(const char *s, char c, size_t *length)
 {
     size_t word_count;
     size_t i;
@@ -85,7 +85,7 @@ static void ft_memfree(char **result, size_t count)
 
 char **ft_split(const char *s, char c)
 {
-    int word_count;
+    size_t word_count;
     char **result;
     size_t i;
     size_t start;
