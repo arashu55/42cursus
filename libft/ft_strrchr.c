@@ -38,7 +38,7 @@ char *ft_strrchr(const char *s, int c)
 
     if (b == -1)
     {
-        return '\0';
+        return NULL;
     }
     return (char *)&s[b];
 }
