@@ -6,7 +6,7 @@
 /*   By: ashu <ashu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 08:26:58 by ashu              #+#    #+#             */
-/*   Updated: 2024/09/27 18:08:30 by ashu             ###   ########.fr       */
+/*   Updated: 2024/09/27 18:12:48 by ashu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 void ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
     size_t i;
-    char *str;
 
     if (!s || !f)
         return;
