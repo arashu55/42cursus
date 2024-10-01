@@ -6,7 +6,7 @@
 #    By: ashu <ashu@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/26 19:33:55 by ashu              #+#    #+#              #
-#    Updated: 2024/09/30 20:36:28 by ashu             ###   ########.fr        #
+#    Updated: 2024/10/01 14:32:17 by ashu             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,6 @@ SRCS = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c \
        ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 
 OBJS = $(SRCS:.c=.o)
-B_OBJS = $(B_SRCS:.c=.o)
 
 .c.o:
 	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
@@ -46,3 +45,4 @@ fclean: clean
 
 re: fclean all
 
+.PHONY : all bonus clean fclean re
