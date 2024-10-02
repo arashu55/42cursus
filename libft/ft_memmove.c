@@ -6,20 +6,20 @@
 /*   By: ashu <ashu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/10 09:47:02 by ashu              #+#    #+#             */
-/*   Updated: 2024/09/13 07:02:14 by ashu             ###   ########.fr       */
+/*   Updated: 2024/10/02 20:12:22 by ashu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *memmove(void *dest, const void *src, size_t n)
+void *memmove(void *dst, const void *src, size_t n)
 {
     unsigned char * a;
     const unsigned char * b;
     unsigned char c[n];
     size_t i;
 
-    a = (unsigned char *)dest;
+    a = (unsigned char *)dst;
     b = (const unsigned char *)src;
     i = 0;
 
@@ -36,7 +36,7 @@ void *memmove(void *dest, const void *src, size_t n)
         i++;
     }
 
-    return dest;
+    return dst;
 }
 
 // スタックオーバーフロー対策のため、バファをヒープ領域にする必要あり。
