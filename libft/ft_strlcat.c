@@ -6,7 +6,7 @@
 /*   By: ashu <ashu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/10 10:51:43 by ashu              #+#    #+#             */
-/*   Updated: 2024/09/13 07:02:28 by ashu             ###   ########.fr       */
+/*   Updated: 2024/10/07 22:20:24 by ashu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,39 +14,33 @@
 
 size_t ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
+    size_t dst_len;
+    size_t src_len;
     size_t i;
-    size_t j;
 
+    dst_len = 0;
+    src_len = ft_strlen(src);
+
+    // dstの長さを取得
+    while (dst_len < dstsize && dst[dst_len])
+        dst_len++;
+
+    // dstsizeが0またはdstの長さがdstsizeに達している場合、srcの長さを返す
+    if (dst_len == dstsize)
+        return (dstsize + src_len);
+
+    // srcをdstにコピーする、バッファサイズを超えない範囲で
     i = 0;
-    j = 0;
-
-    while (dst[i] && i < dstsize)
+    while (src[i] && (dst_len + i + 1) < dstsize)
     {
-        i++;
-        j++;
-    }
-
-    if (dstsize != 0 && dstsize < j)
-    {
-        while (src[i - j] && (i < dstsize - 1))
-        {
-            dst[i] = src[i - j];
-            i++;
-        }
-        dst[i] = '\0';
-
-        while (src[i - j])
-        {
-            i++;
-        }
-        return i;
-    }
-
-    i = 0;
-
-    while (src[i])
-    {
+        dst[dst_len + i] = src[i];
         i++;
     }
-    return dstsize + i; 
+
+    // 必要に応じてNUL終端
+    if (dst_len + i < dstsize)
+        dst[dst_len + i] = '\0';
+
+    // 結果の長さを返す
+    return (dst_len + src_len);
 }
