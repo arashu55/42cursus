@@ -6,7 +6,7 @@
 /*   By: ashu <ashu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/10 10:25:13 by ashu              #+#    #+#             */
-/*   Updated: 2024/09/13 07:02:30 by ashu             ###   ########.fr       */
+/*   Updated: 2024/10/07 21:39:28 by ashu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,10 @@
 size_t ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
     size_t i;
+    size_t src_len;
     
     i = 0;
+    src_len = ft_strlen(src);
     
     if (dstsize != 0)
     {
@@ -27,11 +29,10 @@ size_t ft_strlcpy(char *dst, const char *src, size_t dstsize)
         }
         dst[i] = '\0';
     }
-   
-    // i = 0;  これいらないらしいけど確かにそうだわ！！
-    while (src[i] != '\0')
+    else
     {
-        i++;
+        return src_len;
     }
+   
     return i;
 }
