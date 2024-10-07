@@ -6,7 +6,7 @@
 /*   By: ashu <ashu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/13 05:25:28 by ashu              #+#    #+#             */
-/*   Updated: 2024/09/13 07:01:20 by ashu             ###   ########.fr       */
+/*   Updated: 2024/10/07 22:50:06 by ashu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,9 @@ void *ft_calloc(size_t nmemb, size_t size)
 {
     size_t i;
     char *s;
+
+    if (nmemb != 0 && size != 0 && nmemb > SIZE_MAX / size)
+        return NULL;
 
     s = (char *)malloc(nmemb * size);
     
@@ -30,5 +33,8 @@ void *ft_calloc(size_t nmemb, size_t size)
         s[i] = 0;
         i++;
     }
-    return (void *)s;
+    // メモリを0で初期化
+    ft_bzero(s, nmemb * size);
+
+    return s;
 }
