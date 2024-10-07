@@ -6,7 +6,7 @@
 /*   By: ashu <ashu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/10 10:25:13 by ashu              #+#    #+#             */
-/*   Updated: 2024/10/07 21:39:28 by ashu             ###   ########.fr       */
+/*   Updated: 2024/10/07 21:47:45 by ashu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,6 @@ size_t ft_strlcpy(char *dst, const char *src, size_t dstsize)
         }
         dst[i] = '\0';
     }
-    else
-    {
-        return src_len;
-    }
    
-    return i;
+    return src_len; // コピーされた量に関わらず、srcの長さを返す
 }
