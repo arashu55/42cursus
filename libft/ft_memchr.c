@@ -6,7 +6,7 @@
 /*   By: ashu <ashu@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/10 15:31:47 by ashu              #+#    #+#             */
-/*   Updated: 2024/09/13 07:01:42 by ashu             ###   ########.fr       */
+/*   Updated: 2024/10/08 21:46:41 by ashu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 void *ft_memchr(const void *s, int c, size_t n)
 {
-    const char *a;
+    const unsigned char *a;
     unsigned char b;
     size_t i;
 
-    a = (const char *)s;
+    a = (const unsigned char *)s;
     b = (unsigned char)c;
     i = 0;
 
